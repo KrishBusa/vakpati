@@ -8,6 +8,8 @@ class Check_out_page extends StatefulWidget {
 }
 
 class _Check_out_pageState extends State<Check_out_page> {
+  int _selectedValue = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,16 +101,95 @@ class _Check_out_pageState extends State<Check_out_page> {
                     ],
                   ),
                 ),
-                Row(
-                  children: [
-                    Text("Billing address same as shipping address"),
-                  ],
+                RadioMenuButton(
+                  value: 1,
+                  groupValue: _selectedValue,
+                  onChanged: (int? value) {
+                    setState(() {
+                      _selectedValue = value!;
+                    });
+                    },
+                  child: Text("Billing address same as shipping address"),
                 ),
-                Row(
-                  children: [
-                    Text("Add new shipping address"),
-                  ],
-                )
+                RadioMenuButton(
+                  value: 0,
+                  groupValue: _selectedValue,
+                  onChanged: (int? value) {
+                    setState(() {
+                      _selectedValue = value!;
+                    });
+                  },
+                  child: Text("Add new shipping address")
+                ),
+                SizedBox(height: 20,),
+                Container(
+                  margin: EdgeInsets.all(20),
+                  color: Colors.white,
+                  height: 160,
+                  width: 370,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Shipping Address",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 22,color: Color.fromRGBO(205, 155, 65, 1.0),),),
+                          ),
+                        ],
+                      ),
+                      Container(
+                          width: 350,
+                          child: Divider()),
+                      SizedBox(
+                        height: 200,
+                        width: 330,
+                        child: Column(
+                          children: [
+                            TextField(
+                              decoration: InputDecoration(
+                                label: Text("Name",style: TextStyle(color: Colors.teal),)
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                  label: Text("Email Id",style: TextStyle(color: Colors.teal,),)
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                  label: Text("Contect No.",style: TextStyle(color: Colors.teal,),)
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                  label: Text("Address",style: TextStyle(color: Colors.teal,),)
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                  label: Text("Pin code",style: TextStyle(color: Colors.teal,),)
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                  label: Text("Name",style: TextStyle(color: Colors.teal,))
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                  label: Text("Name",style: TextStyle(color: Colors.teal,fontSize: 20),)
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+
+
+
               ],
             ),
           ),
