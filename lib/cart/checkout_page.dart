@@ -14,7 +14,7 @@ class _Check_out_pageState extends State<Check_out_page> {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
         title:  SizedBox(
-            height: 6,
+            height: 60,
             width: 70,
             child: Image.asset("assets/images/img.png")
         ),
