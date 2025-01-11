@@ -4,6 +4,7 @@ import 'package:vakpati/Splach_screen.dart';
 import 'package:vakpati/approvel_admin_show_scrren.dart';
 import 'package:vakpati/cart/cart_page.dart';
 import 'package:vakpati/cart/checkout_page.dart';
+import 'package:vakpati/product_page/Order_history.dart';
 import 'package:vakpati/product_page/categaris_images_screen.dart';
 import 'package:vakpati/home_screen.dart';
 import 'package:vakpati/product_page/product_Page.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Check_out_page()
+      home: Order_History_page()
     );
   }
 }
