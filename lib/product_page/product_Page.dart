@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:vakpati/cart/cart_page.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final List<String> imageUrls = [
@@ -13,11 +14,13 @@ class ProductDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(234, 253, 252, 249),
       appBar: AppBar(
+        leading: Icon(Icons.menu,color: Colors.white,size: 30,),
+        automaticallyImplyLeading: false,
         backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
         title:  SizedBox(
             height: 60,
-            width: 70,
             child: Image.asset("assets/images/img.png")
         ),
         actions: [
@@ -50,8 +53,6 @@ class ProductDetailPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 12),
-
-              // Carousel Slider for Images
               Container(
                 height: 300,
                 child: Column(
@@ -128,13 +129,13 @@ class ProductDetailPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Container(
                 height: 60,
                 color: Colors.white,
                 child: Row(
                   children: [
-                    SizedBox(width: 20,),
+                    SizedBox(width: 10,),
                     Text(
                       'Rating - ',
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: Colors.teal),
@@ -159,9 +160,7 @@ class ProductDetailPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-
-              // Size Selector
+              SizedBox(height: 10),
               Container(
                 height: 60,
                 color: Colors.white,
@@ -204,11 +203,7 @@ class ProductDetailPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-
-              SizedBox(height: 20),
-
-              // Price Section
-              Container(
+              SizedBox(
                 height: 100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -224,7 +219,7 @@ class ProductDetailPage extends StatelessWidget {
                             color: Colors.grey,
                           ),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 6),
                         Text(
                           'Offer Price - 14599/-',
                           style: TextStyle(
@@ -246,7 +241,9 @@ class ProductDetailPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(32),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=>Cart_screen()));
+                        },
                         child: Text(
                           'ADD TO CART',
                           style: TextStyle(

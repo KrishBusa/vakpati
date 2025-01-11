@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/sign%20in.dart';
 
 class Choose_screen extends StatefulWidget {
   const Choose_screen({super.key});
@@ -39,7 +40,9 @@ class _Choose_screenState extends State<Choose_screen> {
                 height: 60,
                 width: 216,
                 child: OutlinedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>Sign_in_screen()));
+                  },
                   style: OutlinedButton.styleFrom(
                     backgroundColor: Color.fromRGBO(
                         244, 240, 220, 0.9254901960784314)

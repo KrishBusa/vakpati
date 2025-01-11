@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/sign%20up.dart';
 
 class Sign_in_screen extends StatefulWidget {
   const Sign_in_screen({super.key});
@@ -66,18 +67,23 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
               Text("Forgot Password?",style: TextStyle(color: Colors.teal),),
               SizedBox(height: 10),
               Divider(),
-              RichText(
-                text: TextSpan(
-                  text: 'You are not registered use click ',
-                  style: TextStyle(color: Colors.black), 
-                  children: [
-                    TextSpan(
-                      text: 'here',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>Sign_Up_scren()));
+                },
+                child: RichText(
+                  text: TextSpan(
+                    text: 'You are not registered use click ',
+                    style: TextStyle(color: Colors.black),
+                    children: [
+                      TextSpan(
+                        text: 'here',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               )
 

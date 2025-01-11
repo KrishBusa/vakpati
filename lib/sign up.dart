@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/Otp_scrren.dart';
 
 class Sign_Up_scren extends StatefulWidget {
   const Sign_Up_scren({super.key});
@@ -69,7 +70,9 @@ class _Sign_Up_screnState extends State<Sign_Up_scren> {
                 height: 60,
                 width: 216,
                 child: OutlinedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>OtpScreen()));
+                  },
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Color.fromRGBO(205, 155, 65, 1.0)
                   ),
@@ -82,24 +85,10 @@ class _Sign_Up_screnState extends State<Sign_Up_scren> {
                   ),
                 ),
               ),
-              SizedBox(height: 12),
-              Text("Forgot Password?",style: TextStyle(color: Colors.teal),),
               SizedBox(height: 10),
               Divider(),
-              RichText(
-                text: TextSpan(
-                  text: 'You are not registered use click ',
-                  style: TextStyle(color: Colors.black),
-                  children: [
-                    TextSpan(
-                      text: 'here',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              SizedBox(height: 10,),
+              Text("Are you running customer click here",style: TextStyle(color: Colors.teal),),
               Spacer(),
 
 

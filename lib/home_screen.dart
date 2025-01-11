@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/product_page/categaris_images_screen.dart';
 
 class Home_scren extends StatefulWidget {
   const Home_scren({super.key});
@@ -11,13 +12,15 @@ class _Home_screnState extends State<Home_scren> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color.fromARGB(234, 253, 252, 249),
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
           title:  SizedBox(
               height: 60,
-              width: 70,
               child: Image.asset("assets/images/img.png")
           ),
+          leading: Icon(Icons.menu,color: Colors.white,size: 30,),
           actions: [
             Icon(Icons.search_rounded,size: 35,),
             SizedBox(width: 16),
@@ -78,7 +81,9 @@ class _Home_screnState extends State<Home_scren> {
                 itemCount: 2,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=>Categaris_Images_Screen()));
+                    },
                     child: Stack(
                       children :[
                         Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/product_page/product_Page.dart';
 
 class Categaris_Images_Screen extends StatefulWidget {
   const Categaris_Images_Screen({super.key});
@@ -11,13 +12,14 @@ class _Categaris_Images_ScreenState extends State<Categaris_Images_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(234, 253, 252, 249),
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
         title:  SizedBox(
             height: 60,
-            width: 70,
             child: Image.asset("assets/images/img.png")
         ),
+        leading: Icon(Icons.menu,color: Colors.white,size: 30,),
         actions: [
           Icon(Icons.search_rounded,size: 35,color: Colors.white,),
           SizedBox(width: 16),
@@ -38,35 +40,37 @@ class _Categaris_Images_ScreenState extends State<Categaris_Images_Screen> {
             itemCount: 8,
             itemBuilder: (context, index) {
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>ProductDetailPage()));
+                },
                 child: Stack(
                     children :[
                       Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
                           border: Border.all(color: Colors.grey.shade300),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
-                                  image: DecorationImage(
-                                    image: NetworkImage("https://image.wedmegood.com/resized/720X/uploads/member/1660026/1608125893_3.jpg"),
-                                    fit: BoxFit.cover,
+                              child: Stack(
+                                children:[
+                                  Container(
+                                  decoration: const BoxDecoration(
+                                    borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
+                                    image: DecorationImage(
+                                      image: NetworkImage("https://image.wedmegood.com/resized/720X/uploads/member/1660026/1608125893_3.jpg"),
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            const Padding(
-                              padding:  EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Center(child: Text('₹ 15,000/-',)),
-                                ],
+                                  Positioned(
+                                    bottom: 15,
+                                      right: 50,
+                                      left: 50,
+                                      child: Text('₹ 15,000/-',style: TextStyle(fontSize: 18),)
+                                  )
+                                ]
                               ),
                             ),
                           ],

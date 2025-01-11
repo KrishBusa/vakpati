@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/home_screen.dart';
 
 class Approval_admin_Show_Screen extends StatefulWidget {
   const Approval_admin_Show_Screen({super.key});
@@ -8,6 +9,15 @@ class Approval_admin_Show_Screen extends StatefulWidget {
 }
 
 class _Approval_admin_Show_ScreenState extends State<Approval_admin_Show_Screen> {
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Home_scren()),
+      );
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

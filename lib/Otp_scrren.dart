@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/approvel_admin_show_scrren.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -13,63 +14,54 @@ class _OtpScreenState extends State<OtpScreen> {
     return Scaffold(
       body: Center(
         child: SizedBox(
-          width: 280,
+          width: 400,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-               Spacer(),
+              SizedBox(height: 100,),
               SizedBox(
                 height: 250,
                 width: 250,
                 child: Image.asset("assets/images/style.png"),
               ),
-               SizedBox(height: 50),
-               Text(
-                "Enter your one time password",
-                style: TextStyle(fontSize: 20),
+               SizedBox(height: 100),
+              Text("Enter your one time password",style: TextStyle(fontSize: 20),),
+              SizedBox(height: 100,),
+              Row(
+                children: [
+                  Spacer(),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  SizedBox(width: 10,),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  SizedBox(width: 10,),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  SizedBox(width: 10,),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  Spacer(),
+                ],
               ),
-               SizedBox(height: 20),
-              SizedBox(
-                width: 300,
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        TextField(
-                          keyboardType: TextInputType.number,
-                          decoration:  InputDecoration(
-                          ),
-                        ),
-                        TextField(
-                          keyboardType: TextInputType.number,
-                          decoration:  InputDecoration(
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-               SizedBox(height: 30),
+              SizedBox(height: 50),
               SizedBox(
                 height: 60,
                 width: 216,
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>Approval_admin_Show_Screen()));
+                  },
                   style: OutlinedButton.styleFrom(
-                    backgroundColor:  Color.fromRGBO(205, 155, 65, 1.0),
+                      backgroundColor: Color.fromRGBO(205, 155, 65, 1.0)
                   ),
-                  child:  Text(
+                  child: Text(
                     "SUBMIT",
                     style: TextStyle(
-                      color: Color.fromRGBO(244, 240, 220, 0.9254901960784314),
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                    ),
+                        color:Color.fromRGBO(244, 240, 220, 0.9254901960784314),
+                        fontSize: 23,
+                        fontWeight: FontWeight.w400 ),
                   ),
                 ),
               ),
-               Spacer(),
+              Spacer(),
+
             ],
           ),
         ),

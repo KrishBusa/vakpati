@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vakpati/chose_scren.dart';
 
 class Splach_Screen extends StatefulWidget {
   const Splach_Screen({super.key});
@@ -8,6 +9,18 @@ class Splach_Screen extends StatefulWidget {
 }
 
 class _Splach_ScreenState extends State<Splach_Screen> {
+  @override
+  void initState() {
+    super.initState();
+    // Navigate to the next screen after 3 seconds
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Choose_screen()),
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vakpati/cart/checkout_page.dart';
 
 class Cart_screen extends StatefulWidget {
   const Cart_screen({super.key});
@@ -11,13 +13,15 @@ class _Cart_screenState extends State<Cart_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(234, 253, 252, 249),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
         title:  SizedBox(
             height: 60,
-            width: 70,
             child: Image.asset("assets/images/img.png")
         ),
+        leading: Icon(Icons.menu,color: Colors.white,size: 30,),
         actions: [
           Icon(Icons.search_rounded,size: 35,color: Colors.white,),
           SizedBox(width: 16),
@@ -45,17 +49,17 @@ class _Cart_screenState extends State<Cart_screen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
             child: Container(
               height: 150,
               color: Colors.white,
               child: Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
                     child: SizedBox(
                       height: 130,
-                      width: 130,
+                      width: 120,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8), // Round the image corners
                         child: Image.network(
@@ -65,6 +69,9 @@ class _Cart_screenState extends State<Cart_screen> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                      height: 120,
+                      child: VerticalDivider()),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
@@ -88,24 +95,22 @@ class _Cart_screenState extends State<Cart_screen> {
                             ),
                           ),
                           SizedBox(height: 16),
-                          Row(
-                            children: [
-                              IconButton(
-                                onPressed: () {}, // Decrease quantity
-                                icon: Icon(Icons.add_circle_outline, color: Colors.grey),
-                              ),
-                              Text(
-                                "1",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {}, // Increase quantity
-                                icon: Icon(Icons.remove_circle_outline, color: Colors.grey),
-                              ),
-                            ],
+                          Container(
+                            width: 76,
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(200)
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.add_circle_outline, color: Colors.grey),
+                                SizedBox(width: 8),
+                                Text("1", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,)),
+                                SizedBox(width: 8),
+                                Icon(Icons.remove_circle_outline, color: Colors.grey),
+
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -136,6 +141,9 @@ class _Cart_screenState extends State<Cart_screen> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                      height: 120,
+                      child: VerticalDivider()),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
@@ -159,24 +167,22 @@ class _Cart_screenState extends State<Cart_screen> {
                             ),
                           ),
                           SizedBox(height: 16),
-                          Row(
-                            children: [
-                              IconButton(
-                                onPressed: () {}, // Decrease quantity
-                                icon: Icon(Icons.add_circle_outline, color: Colors.grey),
-                              ),
-                              Text(
-                                "1",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {}, // Increase quantity
-                                icon: Icon(Icons.remove_circle_outline, color: Colors.grey),
-                              ),
-                            ],
+                          Container(
+                            width: 76,
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey),
+                                borderRadius: BorderRadius.circular(200)
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.add_circle_outline, color: Colors.grey),
+                                SizedBox(width: 8),
+                                Text("1", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,)),
+                                SizedBox(width: 8),
+                                Icon(Icons.remove_circle_outline, color: Colors.grey),
+
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -258,26 +264,36 @@ class _Cart_screenState extends State<Cart_screen> {
             width: 370,
             child: Row(
               children: [
-                Container(
-                  height: 50,
-                  width: 180,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Color.fromRGBO(205, 155, 65, 1.0),
-                  ),
-                  child: Center(child: Text("CONTINUE SHOPPING",style: TextStyle(fontSize:15,color: Colors.white,fontWeight: FontWeight.w400),)),
+                GestureDetector(
+                  onTap: (){
 
+                  },
+                  child: Container(
+                    height: 50,
+                    width: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Color.fromRGBO(205, 155, 65, 1.0),
+                    ),
+                    child: Center(child: Text("CONTINUE SHOPPING",style: TextStyle(fontSize:15,color: Colors.white,fontWeight: FontWeight.w400),)),
+
+                  ),
                 ),
                 SizedBox(width: 10,),
-                Container(
-                  height: 50,
-                  width: 180,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Color.fromRGBO(205, 155, 65, 1.0),
-                  ),
-                  child: Center(child: Text("PROCEED TO PAY",style: TextStyle(fontSize:15,color: Colors.white,fontWeight: FontWeight.w300),)),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>Check_out_page()));
+                  },
+                  child: Container(
+                    height: 50,
+                    width: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Color.fromRGBO(205, 155, 65, 1.0),
+                    ),
+                    child: Center(child: Text("PROCEED TO PAY",style: TextStyle(fontSize:15,color: Colors.white,fontWeight: FontWeight.w400),)),
 
+                  ),
                 ),
               ],
             ),
@@ -294,7 +310,7 @@ class _Cart_screenState extends State<Cart_screen> {
             SizedBox(width:  20,),
             Icon(Icons.home_outlined,size: 32,color: Colors.white,),
             Spacer(),
-            Icon(Icons.shopping_cart_outlined,size: 32,color: Colors.white,),
+            Icon(CupertinoIcons.person,size: 32,color: Colors.white,),
             SizedBox(width: 20,),
           ],
         ),
