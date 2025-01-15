@@ -55,7 +55,7 @@ class _Check_out_pageState extends State<Check_out_page> {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
                       color: Colors.white,
                       width: 370,
                       child: Column(
@@ -120,9 +120,8 @@ class _Check_out_pageState extends State<Check_out_page> {
                         Text("Add new shipping address")
                       ],
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 16,),
                     Container(
-                      margin: EdgeInsets.all(20),
                       color: Colors.white,
                       width: 370,
                       child: Column(
@@ -184,9 +183,6 @@ class _Check_out_pageState extends State<Check_out_page> {
                         ],
                       ),
                     ),
-
-
-
                   ],
                 ),
               ),
@@ -281,7 +277,7 @@ class _Check_out_pageState extends State<Check_out_page> {
                   ),
                 ),
               ),
-
+              SizedBox(height: 10)
             ],
           ),
         ),

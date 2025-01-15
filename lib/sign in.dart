@@ -50,7 +50,9 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                 height: 60,
                 width: 216,
                 child: OutlinedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>Sign_Up_scren()));
+                  },
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Color.fromRGBO(205, 155, 65, 1.0)
                   ),

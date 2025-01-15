@@ -24,8 +24,8 @@ class _Advance_payment_pageState extends State<Advance_payment_page> {
           child: Image.asset("assets/images/img.png"),
         ),
         actions: [
-          const Icon(Icons.search_rounded, size: 35, color: Colors.white),
-          const SizedBox(width: 16),
+           Icon(Icons.search_rounded, size: 35, color: Colors.white),
+           SizedBox(width: 16),
         ],
       ),
 
@@ -52,16 +52,21 @@ class _Advance_payment_pageState extends State<Advance_payment_page> {
             color: Colors.white,
             child: Column(
               children: [
-                Text(
-                  "TAX INVOICE",
-                  style: TextStyle(fontSize: 20, color: Colors.teal, fontWeight: FontWeight.w600),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "PAYMENT RECEIPT",
+                    style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 DottedLine(),
-                Text("Vakpati Jewellers", style: TextStyle(fontSize: 20, color: Colors.teal)),
-                SizedBox(height: 10),
-                Text("Agrasen Squre, 10-A Sapna Sangeeta Rd, Snehnagar", style: TextStyle(color: Colors.teal)),
-                Text("Indore, Madhya Pradesh 452002", style: TextStyle(color: Colors.teal)),
+                SizedBox(height: 3),
+                Text("Vakpati Jewellers", style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500, color: Colors.grey)),
+                Text("Agrasen Squre, 10-A Sapna Sangeeta Rd, Snehnagar", style: TextStyle(color: Colors.grey)),
+                Text("Indore, Madhya Pradesh 452002", style: TextStyle(color: Colors.grey)),
+                SizedBox(height: 4,),
                 DottedLine(),
+                SizedBox(height: 4,),
                 Row(
                   children: [
                     SizedBox(width: 9,),
@@ -108,8 +113,8 @@ class _Advance_payment_pageState extends State<Advance_payment_page> {
                     SizedBox(width: 10,),
                     Text("Deposit Amount In Rs.",style: TextStyle(fontSize: 18),),
                     Spacer(),
-                    Text("5000.00",style: TextStyle(fontSize: 30,color: Colors.teal),),
-                    SizedBox(width: 10,),
+                    Text("5000.00",style: TextStyle(fontSize: 30,color: Colors.teal,fontWeight: FontWeight.w600),),
+                    SizedBox(width: 9,),
                   ],
                 ),
                 SizedBox(height: 10,),
@@ -118,7 +123,7 @@ class _Advance_payment_pageState extends State<Advance_payment_page> {
                 Row(
                   children: [
                     SizedBox(width: 10),
-                    Text("Amount in Words: Five thousands only.",style: TextStyle(color: Colors.teal),),
+                    Text("Amount in Words: Five thousands only.",style: TextStyle(color: Colors.grey),),
                   ],
                 ),
                 SizedBox(height: 10,),

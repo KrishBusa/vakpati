@@ -13,6 +13,7 @@ class _My_Profie_pageState extends State<My_Profie_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(234, 253, 252, 249),
       appBar: AppBar(
         leading: Icon(Icons.menu,color: Colors.white,size: 30,),
         backgroundColor: const Color.fromRGBO(205, 155, 65, 1.0),
@@ -22,8 +23,8 @@ class _My_Profie_pageState extends State<My_Profie_page> {
           child: Image.asset("assets/images/img.png"),
         ),
         actions: [
-          const Icon(Icons.search_rounded, size: 35, color: Colors.white),
-          const SizedBox(width: 16),
+           Icon(Icons.search_rounded, size: 35, color: Colors.white),
+           SizedBox(width: 16),
         ],
       ),
 
@@ -44,62 +45,61 @@ class _My_Profie_pageState extends State<My_Profie_page> {
               ),
             ),
           ),
+          SizedBox(height: 15,),
           Expanded(
             child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Container(
-                  width: 380,
-                  color: Colors.white,
-                  child: Padding(
-                    padding:  EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        TextField(
-                          decoration: InputDecoration(
-                              label: Text("Name",style: TextStyle(color: Colors.teal),)
-                          ),
+              child: Container(
+                width: 380,
+                color: Colors.white,
+                child: Padding(
+                  padding:  EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("Name",style: TextStyle(color: Colors.teal),)
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                              label: Text("Email",style: TextStyle(color: Colors.teal,),)
-                          ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("Email",style: TextStyle(color: Colors.teal,),)
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                              label: Text("Contect No.",style: TextStyle(color: Colors.teal,),)
-                          ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("Contect No.",style: TextStyle(color: Colors.teal,),)
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                              label: Text("Billing Address",style: TextStyle(color: Colors.teal,),)
-                          ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("Billing Address",style: TextStyle(color: Colors.teal,),)
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                              label: Text("Shipping Address",style: TextStyle(color: Colors.teal,),)
-                          ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("Shipping Address",style: TextStyle(color: Colors.teal,),)
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                              label: Text("City",style: TextStyle(color: Colors.teal,))
-                          ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("City",style: TextStyle(color: Colors.teal,))
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                              label: Text("State",style: TextStyle(color: Colors.teal,fontSize: 20),)
-                          ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            label: Text("State",style: TextStyle(color: Colors.teal,fontSize: 20),)
                         ),
+                      ),
 
-                      ],
-                    ),
+                    ],
                   ),
                 ),
               ),
             ),
           ),
+          SizedBox(height: 10,),
           SizedBox(
-            height: 50,
+            height: 55,
             width: 216,
             child: OutlinedButton(
               onPressed: () {},
@@ -109,7 +109,8 @@ class _My_Profie_pageState extends State<My_Profie_page> {
               child:  Text(
                 "SAVE",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
                   color: Color.fromRGBO(244, 240, 220, 0.9254901960784314),
                 ),
               ),
@@ -123,7 +124,7 @@ class _My_Profie_pageState extends State<My_Profie_page> {
           ),
           SizedBox(height: 10,),
           SizedBox(
-            height: 50,
+            height: 55,
             width: 216,
             child: OutlinedButton(
               onPressed: () {
@@ -135,7 +136,8 @@ class _My_Profie_pageState extends State<My_Profie_page> {
               child:  Text(
                 "SHARE APP",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
                   color: Color.fromRGBO(244, 240, 220, 0.9254901960784314),
                 ),
               ),

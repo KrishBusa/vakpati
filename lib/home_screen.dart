@@ -68,7 +68,7 @@ class _Home_screnState extends State<Home_scren> {
 
             // Product Grid
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding:  EdgeInsets.all(8.0),
               child: GridView.builder(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
@@ -118,11 +118,11 @@ class _Home_screnState extends State<Home_scren> {
                           ],
                         ),
                       ),
-                        Positioned(
-
-                            child: Icon(Icons.favorite_border, color: Colors.white,size: 30,),
-                          top: 10,
+                         Positioned(
+                            top: 10,
                           right: 10,
+                            child: Icon(Icons.favorite_border, color: Color.fromARGB(
+                                255, 182, 135, 33),size: 30,),
                         ),
 
                       ]

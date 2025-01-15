@@ -56,12 +56,12 @@ class _My_Invoice_pageState extends State<My_Invoice_page> {
                   children: [
                      Text(
                       "TAX INVOICE",
-                      style: TextStyle(fontSize: 20, color: Colors.teal, fontWeight: FontWeight.w600),
+                      style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w600),
                     ),
                      SizedBox(height: 8),
                      DottedLine(),
                      SizedBox(height: 8),
-                     Text("Vakpati Jewellers", style: TextStyle(fontSize: 20, color: Colors.teal,fontWeight: FontWeight.w400)),
+                     Text("Vakpati Jewellers", style: TextStyle(fontSize: 20, color: Colors.grey,fontWeight: FontWeight.w500)),
                      SizedBox(height: 4),
                      Text("Agrasen Squre, 10-A Sapna Sangeeta Rd, Snehnagar", style: TextStyle(color: Colors.grey)),
                      Text("Indore, Madhya Pradesh 452002", style: TextStyle(color: Colors.grey)),
@@ -133,65 +133,68 @@ class _My_Invoice_pageState extends State<My_Invoice_page> {
                     SizedBox(height: 8),
                      DottedLine(),
                     SizedBox(height: 8),
-                    Column(
-                      children: [
-                        Row(
-                          children:  [
-                            Text("Item detail", style: TextStyle(fontSize: 16)),
-                            Spacer(),
-                            Text("Qty.", style: TextStyle(fontSize: 16)),
-                            Spacer(),
-                            Text("Amount", style: TextStyle(fontSize: 16)),
-                          ],
-                        ),
-                         Divider(),
-                        Row(
-                          children:  [
-                            Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.grey)),
-                            Spacer(),
-                            Text("1", style: TextStyle(fontSize: 16, color: Colors.grey)),
-                            Spacer(),
-                            Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.grey)),
-                          ],
-                        ),
-                         Divider(),
-                        Row(
-                          children:  [
-                            Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.grey)),
-                            Spacer(),
-                            Text("1", style: TextStyle(fontSize: 16, color: Colors.grey)),
-                            Spacer(),
-                            Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.grey)),
-                          ],
-                        ),
-                         Divider(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children:  [
-                                Text("Item Total", style: TextStyle(fontSize: 16)),
-                                Text("CGST(1.5%)", style: TextStyle(fontSize: 16)),
-                                Text("SGST(1.5%)", style: TextStyle(fontSize: 16)),
-                                Text("Discount", style: TextStyle(fontSize: 16)),
-                                Text("Grand Total", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                              ],
-                            ),
-                             SizedBox(width: 50),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: const [
-                                Text("29000.00", style: TextStyle(fontSize: 16)),
-                                Text("435.00", style: TextStyle(fontSize: 16)),
-                                Text("435.00", style: TextStyle(fontSize: 16)),
-                                Text("1000.00", style: TextStyle(fontSize: 16)),
-                                Text("28870.00", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
+                    Padding(
+                      padding:  EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children:  [
+                              Text("Item detail", style: TextStyle(fontSize: 16)),
+                              Spacer(),
+                              Text("Qty.", style: TextStyle(fontSize: 16)),
+                              Spacer(),
+                              Text("Amount", style: TextStyle(fontSize: 16)),
+                            ],
+                          ),
+                           Divider(),
+                          Row(
+                            children:  [
+                              Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                              Spacer(),
+                              Text("1", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                              Spacer(),
+                              Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            ],
+                          ),
+                           Divider(),
+                          Row(
+                            children:  [
+                              Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                              Spacer(),
+                              Text("1", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                              Spacer(),
+                              Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            ],
+                          ),
+                           Divider(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children:  [
+                                  Text("Item Total", style: TextStyle(fontSize: 16)),
+                                  Text("CGST(1.5%)", style: TextStyle(fontSize: 16)),
+                                  Text("SGST(1.5%)", style: TextStyle(fontSize: 16)),
+                                  Text("Discount", style: TextStyle(fontSize: 16)),
+                                  Text("Grand Total", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+                                ],
+                              ),
+                               SizedBox(width: 50),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: const [
+                                  Text("29000.00", style: TextStyle(fontSize: 16)),
+                                  Text("435.00", style: TextStyle(fontSize: 16)),
+                                  Text("435.00", style: TextStyle(fontSize: 16)),
+                                  Text("1000.00", style: TextStyle(fontSize: 16)),
+                                  Text("28870.00", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: 8),
                      DottedLine(),

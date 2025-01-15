@@ -140,7 +140,7 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                                 child: Text("Shipping and Billing Address",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 20),),
                               ),
                               Spacer(),
-                              Icon(Icons.keyboard_arrow_down_sharp,size: 50,color: Colors.teal,)
+                              Icon(Icons.keyboard_arrow_down_sharp,size: 50,color: Colors.grey,)
                             ],
                           ),
 
@@ -161,7 +161,7 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                                 child: Text("Payment option ",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 20),),
                               ),
                               Spacer(),
-                              Icon(Icons.keyboard_arrow_down_sharp,size: 50,color: Colors.teal,)
+                              Icon(Icons.keyboard_arrow_down_sharp,size: 50,color: Colors.grey,)
                             ],
                           ),
                           SizedBox(height: 15,),
@@ -307,7 +307,7 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                     ),
                     SizedBox(height: 20,),
                     SizedBox(
-                      height: 50,
+                      height: 52,
                       width: 216,
                       child: OutlinedButton(
                         onPressed: () {
@@ -319,7 +319,8 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                         child:  Text(
                           "PROCEED TO PAY",
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
                             color: Color.fromRGBO(244, 240, 220, 0.9254901960784314),
                           ),
                         ),

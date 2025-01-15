@@ -1,3 +1,4 @@
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vakpati/screen/Advance_payment_recipt.dart';
@@ -288,13 +289,16 @@ class _Order_history_3_pageState extends State<Order_history_3_page> {
                         return AlertDialog(
                           content: Stack(
                             children: [
-                              Container(
-                                height: 400,
+                              SizedBox(
+                                height: 360,
                                 width: 600,
                                 child: Column(
                                   children: [
                                     Text("Advance Payment",style: TextStyle(fontSize: 22),),
-                                    Divider(),
+                                    Padding(
+                                      padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                      child: DottedLine(),
+                                    ),
                                     Row(
                                       children: [
                                         Text("Total Payble Amount"),
@@ -398,9 +402,9 @@ class _Order_history_3_pageState extends State<Order_history_3_page> {
                                         ],
                                       ),
                                     ),
-                                    SizedBox(height: 40,),
+                                    SizedBox(height: 12,),
                                     SizedBox(
-                                      height: 50,
+                                      height: 55,
                                       width: 216,
                                       child: OutlinedButton(
                                         onPressed: () {},
@@ -410,7 +414,8 @@ class _Order_history_3_pageState extends State<Order_history_3_page> {
                                         child: const Text(
                                           "PROCEED TO PAY",
                                           style: TextStyle(
-                                            fontSize: 16,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400,
                                             color: Color.fromRGBO(244, 240, 220, 0.9254901960784314),
                                           ),
                                         ),

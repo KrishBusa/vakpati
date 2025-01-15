@@ -138,7 +138,7 @@ class ProductDetailPage extends StatelessWidget {
                     SizedBox(width: 10,),
                     Text(
                       'Rating - ',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: Colors.teal),
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: Colors.grey),
                     ),
                     Spacer(),
                     Row(
@@ -166,38 +166,41 @@ class ProductDetailPage extends StatelessWidget {
                 color: Colors.white,
                 child: Row(
                   children: [
-                    SizedBox(width: 20,),
+                    SizedBox(width: 10,),
                     Text(
-                      'Size',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.teal),
+                      'Size -',
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: Colors.grey),
                     ),
-                    Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [2.5, 3.0, 3.5, 4.0, 4.5]
-                          .map((size) => GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 14, vertical: 8),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: size == 2.5
-                                ? Color.fromRGBO(205, 155, 65, 1.0)
-                                : Colors.white,
-                          ),
-                          child: Text(
-                            size.toString(),
-                            style: TextStyle(
-                              fontSize: 16,
+                    SizedBox(width: 30,),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [2.5, 3.0, 3.5, 4.0, 4.5]
+                            .map((size) => GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 14, vertical: 8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
                               color: size == 2.5
-                                  ? Colors.white
-                                  : Colors.black,
+                                  ? Color.fromRGBO(205, 155, 65, 1.0)
+                                  : Colors.white,
+                            ),
+                            child: Text(
+                              size.toString(),
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: size == 2.5
+                                    ? Colors.white
+                                    : Colors.black,
+                              ),
                             ),
                           ),
-                        ),
-                      ))
-                          .toList(),
+                        ))
+                            .toList(),
+                      ),
                     ),
                   ],
                 ),
@@ -260,30 +263,22 @@ class ProductDetailPage extends StatelessWidget {
               SizedBox(height: 20),
               Container(
                 height: 60,
+                width: double.infinity,
                 color: Colors.white,
-                child: ExpansionTile(
-                  tilePadding: EdgeInsets.zero,
-                  title: Row(
-                    children: [
-                      SizedBox(width: 15),
-                      Text(
-                        'Product specification',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.teal,
-                        ),
-                      ),
-                    ],
-                  ),
+                child: Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Details about the product...',
-                        style: TextStyle(fontSize: 16),
+                    SizedBox(width: 10),
+                    Text(
+                      'Product specification',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.teal,
                       ),
                     ),
+                    Spacer(),
+                    Icon(Icons.keyboard_arrow_down_outlined,size: 45,color: Colors.grey,),
+                    SizedBox(width: 10,),
                   ],
                 ),
               ),

@@ -1,3 +1,4 @@
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class _My_Invoice_page_2State extends State<My_Invoice_page_2> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             alignment: Alignment.centerLeft,
             child: const Text(
-              'My Order History',
+              'My Invoice',
               style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.w400,
@@ -54,14 +55,17 @@ class _My_Invoice_page_2State extends State<My_Invoice_page_2> {
                   children: [
                     Text(
                       "TAX INVOICE",
-                      style: TextStyle(fontSize: 20, color: Colors.teal, fontWeight: FontWeight.w600),
+                      style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.bold),
                     ),
-                    Divider(),
-                    Text("Vakpati Jewellers", style: TextStyle(fontSize: 20, color: Colors.teal)),
-                    SizedBox(height: 10),
-                    Text("Agrasen Squre, 10-A Sapna Sangeeta Rd, Snehnagar", style: TextStyle(color: Colors.teal)),
-                    Text("Indore, Madhya Pradesh 452002", style: TextStyle(color: Colors.teal)),
-                    Divider(),
+                    SizedBox(height: 5),
+                    DottedLine(),
+                    SizedBox(height: 3),
+                    Text("Vagpati Jewellers", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.grey)),
+                    Text("Agrasen Squre, 10-A Sapna Sangeeta Rd, Snehnagar", style: TextStyle(color: Colors.grey)),
+                    Text("Indore, Madhya Pradesh 452002", style: TextStyle(color: Colors.grey)),
+                    SizedBox(height: 9,),
+                    DottedLine(),
+                    SizedBox(height: 9,),
                     Row(
                       children:  [
                         Text("Invoice No.", style: TextStyle(fontSize: 15)),
@@ -83,7 +87,9 @@ class _My_Invoice_page_2State extends State<My_Invoice_page_2> {
                         Text("25 May 2019", style: TextStyle(fontSize: 15)),
                       ],
                     ),
-                    Divider(),
+                    SizedBox(height: 9,),
+                    DottedLine(),
+                    SizedBox(height: 9,),
                     Row(
                       children: [
                         Text("Billing Address", style: TextStyle(fontSize: 16)),
@@ -93,16 +99,18 @@ class _My_Invoice_page_2State extends State<My_Invoice_page_2> {
                       children: [
                         Text(
                           "96-Fb, Mahadev Totla Nagar, Nr. Pipliyahana Squre",
-                          style: TextStyle(color: Colors.teal),
+                          style: TextStyle(color: Colors.grey),
                         ),
                       ],
                     ),
                     Row(
                       children: [
-                        Text("Indore India MP. 452016", style: TextStyle(color: Colors.teal)),
+                        Text("Indore India MP. 452016", style: TextStyle(color: Colors.grey)),
                       ],
                     ),
-                    Divider(),
+                    SizedBox(height: 9,),
+                    DottedLine(),
+                    SizedBox(height: 9,),
                     Row(
                       children: [
                         Text("Shipping Address", style: TextStyle(fontSize: 16)),
@@ -112,80 +120,86 @@ class _My_Invoice_page_2State extends State<My_Invoice_page_2> {
                       children: [
                         Text(
                           "96-Fb, Mahadev Totla Nagar, Nr. Pipliyahana Squre",
-                          style: TextStyle(color: Colors.teal),
+                          style: TextStyle(color: Colors.grey),
                         ),
                       ],
                     ),
                     Row(
                       children: [
-                        Text("Indore India MP. 452016", style: TextStyle(color: Colors.teal)),
+                        Text("Indore India MP. 452016", style: TextStyle(color: Colors.grey)),
                       ],
                     ),
-                    Divider(),
-                    Column(
-                      children: [
-                        Row(
-                          children:  [
-                            Text("Item detail", style: TextStyle(fontSize: 16)),
-                            Spacer(),
-                            Text("Qty.", style: TextStyle(fontSize: 16)),
-                            Spacer(),
-                            Text("Amount", style: TextStyle(fontSize: 16)),
-                          ],
-                        ),
-                        Divider(),
-                        Row(
-                          children:  [
-                            Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Spacer(),
-                            Text("1", style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Spacer(),
-                            Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.teal)),
-                          ],
-                        ),
-                        Divider(),
-                        Row(
-                          children:  [
-                            Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Spacer(),
-                            Text("1", style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Spacer(),
-                            Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.teal)),
-                          ],
-                        ),
-                        Divider(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children:  [
-                                Text("Item Total", style: TextStyle(fontSize: 16)),
-                                Text("CGST(1.5%)", style: TextStyle(fontSize: 16)),
-                                Text("SGST(1.5%)", style: TextStyle(fontSize: 16)),
-                                Text("Total", style: TextStyle(fontSize: 16)),
-                                Text("Advance Payment", style: TextStyle(fontSize: 16)),
-                                Text("Grand Total", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                              ],
-                            ),
-                            SizedBox(width: 50),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: const [
-                                Text("29000.00", style: TextStyle(fontSize: 16)),
-                                Text("435.00", style: TextStyle(fontSize: 16)),
-                                Text("435.00", style: TextStyle(fontSize: 16)),
-                                Text("29835.00", style: TextStyle(fontSize: 16)),
-                                Text("-5000.00", style: TextStyle(fontSize: 16)),
-                                Text("28870.00", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 30),
-                      ],
+                    SizedBox(height: 9,),
+                    DottedLine(),
+                    SizedBox(height: 9,),
+                    Padding(
+                      padding:  EdgeInsets.fromLTRB(8, 0, 8, 0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children:  [
+                              Text("Item detail", style: TextStyle(fontSize: 16)),
+                              Spacer(),
+                              Text("Qty.", style: TextStyle(fontSize: 16)),
+                              Spacer(),
+                              Text("Amount", style: TextStyle(fontSize: 16)),
+                            ],
+                          ),
+                          Divider(thickness: 1.5,color: Colors.teal,),
+                          Row(
+                            children:  [
+                              Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.grey)),
+                              Spacer(),
+                              Text("1", style: TextStyle(fontSize: 16, color: Colors.grey)),
+                              Spacer(),
+                              Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.grey)),
+                            ],
+                          ),
+                          Divider(),
+                          Row(
+                            children:  [
+                              Text("Gold Ring", style: TextStyle(fontSize: 16, color: Colors.grey)),
+                              Spacer(),
+                              Text("1", style: TextStyle(fontSize: 16, color: Colors.grey)),
+                              Spacer(),
+                              Text("14000.00", style: TextStyle(fontSize: 16, color: Colors.grey)),
+                            ],
+                          ),
+                          Divider(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children:  [
+                                  Text("Item Total", style: TextStyle(fontSize: 16)),
+                                  Text("CGST(1.5%)", style: TextStyle(fontSize: 16)),
+                                  Text("SGST(1.5%)", style: TextStyle(fontSize: 16)),
+                                  Text("Total", style: TextStyle(fontSize: 16)),
+                                  Text("Advance Payment", style: TextStyle(fontSize: 16)),
+                                  Text("Grand Total", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+                                ],
+                              ),
+                              SizedBox(width: 50),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: const [
+                                  Text("29000.00", style: TextStyle(fontSize: 16)),
+                                  Text("435.00", style: TextStyle(fontSize: 16)),
+                                  Text("435.00", style: TextStyle(fontSize: 16)),
+                                  Text("29835.00", style: TextStyle(fontSize: 16)),
+                                  Text("-5000.00", style: TextStyle(fontSize: 16)),
+                                  Text("28870.00", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 30),
+                        ],
+                      ),
                     ),
-                    Divider(),
+                    DottedLine(),
+                    SizedBox(height: 9,),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
