@@ -4,18 +4,9 @@ import 'package:vakpati/Splach_screen.dart';
 import 'package:vakpati/approvel_admin_show_scrren.dart';
 import 'package:vakpati/cart/cart_page.dart';
 import 'package:vakpati/cart/checkout_page.dart';
-import 'package:vakpati/cart/checkout_page_2.dart';
-import 'package:vakpati/product_page/Order_history_2.dart';
 import 'package:vakpati/product_page/categaris_images_screen.dart';
 import 'package:vakpati/home_screen.dart';
-import 'package:vakpati/product_page/my_invoice.dart';
-import 'package:vakpati/product_page/my_invoice_2.dart';
 import 'package:vakpati/product_page/product_Page.dart';
-import 'package:vakpati/screen/Advance_payment_recipt.dart';
-import 'package:vakpati/screen/My_Profile.dart';
-import 'package:vakpati/screen/Order_History_1.dart';
-import 'package:vakpati/screen/Order_History_3.dart';
-import 'package:vakpati/screen/Order_history_4.dart';
 import 'package:vakpati/sign%20in.dart';
 import 'package:vakpati/sign%20up.dart';
 
@@ -29,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splach_Screen()
+      home: Check_out_page()
     );
   }
 }
