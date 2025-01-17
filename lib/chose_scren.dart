@@ -12,6 +12,7 @@ class _Choose_screenState extends State<Choose_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255,255,255,255,),
       body: Center(
         child: SizedBox(
           width: 280,
@@ -41,14 +42,14 @@ class _Choose_screenState extends State<Choose_screen> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(200),
-                      color: Color.fromRGBO(205, 155, 65, 1.0),
+                      color: Color.fromARGB(255,183,138,45),
                     ),
                     child: Center(
                         child: Text("ARE YOU BUYER",
                           style: TextStyle(
                               fontSize:16,
                               fontWeight: FontWeight.w500,
-                              color:Color.fromRGBO(244, 240, 220, 0.9254901960784314) ),)),
+                              color:Color.fromARGB(255,254,249,245) ),)),
                   ),
                 ),
               ),
@@ -73,14 +74,14 @@ class _Choose_screenState extends State<Choose_screen> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(200),
-                      color:Color.fromRGBO(244, 240, 220, 0.9254901960784314)
+                      color:Color.fromARGB(255,240,242,242)
                     ),
                     child: Center(
                         child: Text("ARE YOU CUSTOMER",
                           style: TextStyle(
                               fontSize:16,
                               fontWeight: FontWeight.w500,
-                              color:Color.fromRGBO(205, 155, 65, 1.0) ),)),
+                              color:Color.fromARGB(255, 159,121,44) ),)),
                   ),
                 ),
               ),

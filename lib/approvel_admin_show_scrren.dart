@@ -11,7 +11,7 @@ class Approval_admin_Show_Screen extends StatefulWidget {
 class _Approval_admin_Show_ScreenState extends State<Approval_admin_Show_Screen> {
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed( Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Home_scren()),

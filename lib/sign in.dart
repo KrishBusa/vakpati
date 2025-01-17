@@ -32,14 +32,14 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                   children: [
                     TextField(
                       decoration: InputDecoration(
-                        label: Text("Email Id / Mobile No",style: TextStyle(color: Colors.teal),)
+                        label: Text("Email Id / Mobile No",style: TextStyle(color: Colors.grey),)
                       ),
                     ),
                     SizedBox(height: 20,),
                     TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                          label: Text("Password",style: TextStyle(color: Colors.teal),)
+                          label: Text("Password",style: TextStyle(color: Colors.grey),)
                       ),
                     ),
                   ],
@@ -66,7 +66,7 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                 ),
               ),
               SizedBox(height: 12),
-              Text("Forgot Password?",style: TextStyle(color: Colors.teal),),
+              Text("Forgot Password?",style: TextStyle(color: Colors.grey),),
               SizedBox(height: 10),
               Divider(),
               GestureDetector(
