@@ -61,7 +61,7 @@ class _Cart_screenState extends State<Cart_screen> {
                       height: 130,
                       width: 120,
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8), // Round the image corners
+                        borderRadius: BorderRadius.circular(8),
                         child: Image.network(
                           "https://image.wedmegood.com/resized/720X/uploads/member/1660026/1608125893_1.png",
                           fit: BoxFit.cover, // Ensures the image fits well
@@ -133,10 +133,10 @@ class _Cart_screenState extends State<Cart_screen> {
                       height: 130,
                       width: 130,
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8), // Round the image corners
+                        borderRadius: BorderRadius.circular(8),
                         child: Image.network(
                           "https://image.wedmegood.com/resized/720X/uploads/member/1660026/1608125893_4.jpg",
-                          fit: BoxFit.cover, // Ensures the image fits well
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
@@ -233,7 +233,7 @@ class _Cart_screenState extends State<Cart_screen> {
               child: Center(child: Row(
                 children: [
                   SizedBox(width: 20,),
-                  Text("Apply discount coupon",style: TextStyle(fontSize: 18),),
+                  Text("Apply discount coupon",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: CupertinoColors.darkBackgroundGray),),
                 ],
               )),
               decoration: BoxDecoration(
@@ -257,17 +257,15 @@ class _Cart_screenState extends State<Cart_screen> {
               ),)
             ]
           ),
-          Container(
+          SizedBox(
               width: 370,
               child: Divider()),
-          Container(
+          SizedBox(
             width: 370,
             child: Row(
               children: [
                 GestureDetector(
-                  onTap: (){
-
-                  },
+                  onTap: (){},
                   child: Container(
                     height: 50,
                     width: 180,

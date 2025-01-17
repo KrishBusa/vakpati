@@ -277,7 +277,7 @@ class ProductDetailPage extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
-                    Icon(Icons.keyboard_arrow_down_outlined,size: 45,color: Colors.grey,),
+                    Icon(Icons.keyboard_arrow_down_outlined,size: 48,color: Colors.grey,),
                     SizedBox(width: 10,),
                   ],
                 ),

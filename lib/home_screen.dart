@@ -88,7 +88,6 @@ class _Home_screnState extends State<Home_scren> {
                       children :[
                         Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
                           border: Border.all(color: Colors.grey.shade300),
                         ),
                         child: Column(
@@ -96,23 +95,29 @@ class _Home_screnState extends State<Home_scren> {
                           children: [
                             Expanded(
                               child: Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
+                                decoration:  BoxDecoration(
                                   image: DecorationImage(
-                                    image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2YuqQNJV1F-QeQAIu-zEhbgHUyLEz_IriLw&s"), // Add product image
+                                    image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2YuqQNJV1F-QeQAIu-zEhbgHUyLEz_IriLw&s"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                             ),
-                            const Padding(
+                             Padding(
                               padding:  EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Gold Ring', style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text('₹ 15,000/-', style: TextStyle(color: Colors.grey)),
-                                ],
+                              child: Center(
+                                child: Column(
+                                  children: [
+                                    Text('Gold Ring', style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold)),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.currency_rupee,size: 18,color: Colors.teal,),
+                                        Text('15,000/-', style: TextStyle(color: Colors.grey)),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],

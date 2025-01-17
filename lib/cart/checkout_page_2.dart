@@ -10,7 +10,6 @@ class Checkout_Page_2 extends StatefulWidget {
 }
 
 class _Checkout_Page_2State extends State<Checkout_Page_2> {
-  int _selectedValue = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +69,7 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                               ),
                             ],
                           ),
-                          Container(
+                          SizedBox(
                               width: 350,
                               child: Divider()),
                           Row(
@@ -105,7 +104,8 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 5,),
+
+                    SizedBox(height: 20,),
                     Row(
                       children: [
                         SizedBox(width: 10,),
@@ -114,7 +114,7 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                         Text("Billing address same as shipping address"),
                       ],
                     ),
-                    SizedBox(height: 6,),
+                    SizedBox(height: 6),
                     Row(
                       children: [
                         SizedBox(width: 10,),
@@ -123,11 +123,10 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                         Text("Add new shipping address")
                       ],
                     ),
+                    SizedBox(height: 10,),
 
-
-                    SizedBox(height: 20,),
                     Container(
-                      margin: EdgeInsets.all(20),
+                      // margin: EdgeInsets.all(20),
                       color: Colors.white,
                       height: 50,
                       width: 370,
@@ -148,7 +147,7 @@ class _Checkout_Page_2State extends State<Checkout_Page_2> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
                       color: Colors.white,
                       height: 200,
                       width: 370,

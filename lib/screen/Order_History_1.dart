@@ -54,7 +54,7 @@ class _Order_History_1_pageState extends State<Order_History_1_page> {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding:  EdgeInsets.fromLTRB(10, 10, 10, 0),
                       child: Text("Order ID #121",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 22,color: Color.fromRGBO(205, 155, 65, 1.0),),),
                     ),
                   ],
@@ -108,7 +108,6 @@ class _Order_History_1_pageState extends State<Order_History_1_page> {
           Expanded(
             child: SingleChildScrollView(
               child: Container(
-                margin: EdgeInsets.all(10),
                 color: Colors.white,
                 width: 370,
                 child: Column(
@@ -116,8 +115,15 @@ class _Order_History_1_pageState extends State<Order_History_1_page> {
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("Billing and Shipping Address",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 22,color: Color.fromRGBO(205, 155, 65, 1.0),),),
+                          padding:  EdgeInsets.fromLTRB(10, 10, 10, 0),
+                          child: Text(
+                            "Billing and Shipping Address",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 22,
+                              color: Color.fromRGBO(205, 155, 65, 1.0),
+                            ),
+                          ),
                         ),
                       ],
                     ),

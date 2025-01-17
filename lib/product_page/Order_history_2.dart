@@ -152,9 +152,9 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                 Navigator.push(context, MaterialPageRoute(builder: (_)=>My_Invoice_page()));
               },
               style: OutlinedButton.styleFrom(
-                backgroundColor: const Color.fromRGBO(205, 155, 65, 1.0),
+                backgroundColor:  Color.fromRGBO(205, 155, 65, 1.0),
               ),
-              child: const Text(
+              child:  Text(
                 "VIEW INVOICE",
                 style: TextStyle(
                   fontSize: 16,

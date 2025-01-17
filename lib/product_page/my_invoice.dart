@@ -16,7 +16,7 @@ class _My_Invoice_pageState extends State<My_Invoice_page> {
     return Scaffold(
       backgroundColor: Color.fromARGB(234, 253, 252, 249),
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(205, 155, 65, 1.0),
+        backgroundColor:  Color.fromRGBO(205, 155, 65, 1.0),
         leading: Icon(Icons.menu,color: Colors.white,size: 30,),
         title: SizedBox(
           height: 60,
@@ -58,14 +58,14 @@ class _My_Invoice_pageState extends State<My_Invoice_page> {
                       "TAX INVOICE",
                       style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w600),
                     ),
-                     SizedBox(height: 8),
+                     SizedBox(height: 6),
                      DottedLine(),
-                     SizedBox(height: 8),
+                     SizedBox(height: 3),
                      Text("Vakpati Jewellers", style: TextStyle(fontSize: 20, color: Colors.grey,fontWeight: FontWeight.w500)),
-                     SizedBox(height: 4),
                      Text("Agrasen Squre, 10-A Sapna Sangeeta Rd, Snehnagar", style: TextStyle(color: Colors.grey)),
                      Text("Indore, Madhya Pradesh 452002", style: TextStyle(color: Colors.grey)),
-                     DottedLine(),
+                    SizedBox(height: 3),
+                    DottedLine(),
                     SizedBox(height: 8),
                      Row(
                       children:  [

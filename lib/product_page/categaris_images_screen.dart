@@ -68,7 +68,13 @@ class _Categaris_Images_ScreenState extends State<Categaris_Images_Screen> {
                                     bottom: 15,
                                       right: 50,
                                       left: 50,
-                                      child: Text('₹ 15,000/-',style: TextStyle(fontSize: 18),)
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Icon(Icons.currency_rupee,size:23,color: Colors.teal,),
+                                          Text('15,000/-', style: TextStyle(fontSize:18,color: Colors.teal)),
+                                        ],
+                                      ),
                                   )
                                 ]
                               ),
