@@ -13,18 +13,18 @@ class _Order_History_4_pageState extends State<Order_History_4_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(234, 253, 252, 249),
+      backgroundColor: Color.fromARGB(250,238,235,232,),
       appBar: AppBar(
         leading: Icon(Icons.menu,color: Colors.white,size: 30,),
-        backgroundColor: const Color.fromRGBO(205, 155, 65, 1.0),
+        backgroundColor:  Color.fromRGBO(205, 155, 65, 1.0),
         title: SizedBox(
-          height: 60,
-          width: 70,
-          child: Image.asset("assets/images/img.png"),
+          height: 50,
+          width: 90,
+          child: Image.asset("assets/images/Screenshot_2025-01-18_110524-removebg-preview.png",),
         ),
         actions: [
-          const Icon(Icons.search_rounded, size: 35, color: Colors.white),
-          const SizedBox(width: 16),
+           Icon(Icons.search_rounded, size: 35, color: Colors.white),
+           SizedBox(width: 16),
         ],
       ),
       body: CustomScrollView(
@@ -35,9 +35,9 @@ class _Order_History_4_pageState extends State<Order_History_4_page> {
             backgroundColor: Colors.white,
             toolbarHeight: 60,
             flexibleSpace: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding:  EdgeInsets.symmetric(horizontal: 20),
               alignment: Alignment.centerLeft,
-              child: const Text(
+              child:  Text(
                 'Order History',
                 style: TextStyle(
                   fontSize: 23,
@@ -308,7 +308,7 @@ class _Order_History_4_pageState extends State<Order_History_4_page> {
                           MaterialPageRoute(builder: (_) => My_Invoice_page_2()));
                     },
                     style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
+                      backgroundColor:Color.fromARGB(255,183,138,45),
                     ),
                     child: Text(
                       "VIEW INVOICE",
@@ -332,7 +332,7 @@ class _Order_History_4_pageState extends State<Order_History_4_page> {
         height: 50,
         color:  Color.fromRGBO(205, 155, 65, 1.0),
         child: Row(
-          children: const [
+          children:  [
             SizedBox(width: 20),
             Icon(Icons.home_outlined, size: 32, color: Colors.white),
             Spacer(),

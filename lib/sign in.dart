@@ -32,14 +32,17 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                   children: [
                     TextField(
                       decoration: InputDecoration(
-                        label: Text("Email Id / Mobile No",style: TextStyle(color: Colors.grey),)
+                        label: Text("Email Id / Mobile No",style: TextStyle(
+                            color: Color.fromARGB(255, 200, 194, 194)
+                        ),
+                        )
                       ),
                     ),
                     SizedBox(height: 20,),
                     TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                          label: Text("Password",style: TextStyle(color: Colors.grey),)
+                          label: Text("Password",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194)),)
                       ),
                     ),
                   ],
@@ -54,12 +57,12 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                     Navigator.push(context, MaterialPageRoute(builder: (_)=>Sign_Up_scren()));
                   },
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(205, 155, 65, 1.0)
+                      backgroundColor: Color.fromARGB(255,183,138,45),
                   ),
                   child: Text(
                     "Sign in",
                     style: TextStyle(
-                        color:Color.fromRGBO(244, 240, 220, 0.9254901960784314),
+                        color:Color.fromARGB(255,254,249,245),
                         fontSize: 23,
                         fontWeight: FontWeight.w400 ),
                   ),
@@ -76,7 +79,7 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                 child: RichText(
                   text: TextSpan(
                     text: 'You are not registered use click ',
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.black54),
                     children: [
                       TextSpan(
                         text: 'here',

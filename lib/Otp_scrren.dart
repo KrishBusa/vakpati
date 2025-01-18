@@ -30,13 +30,13 @@ class _OtpScreenState extends State<OtpScreen> {
               Row(
                 children: [
                   Spacer(),
-                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black54,),),
                   SizedBox(width: 10,),
-                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black54,),),
                   SizedBox(width: 10,),
-                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black54,),),
                   SizedBox(width: 10,),
-                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black26,),),
+                  SizedBox(width: 75,child: Divider(thickness: 2,color: Colors.black54,),),
                   Spacer(),
                 ],
               ),
@@ -49,14 +49,15 @@ class _OtpScreenState extends State<OtpScreen> {
                     Navigator.push(context, MaterialPageRoute(builder: (_)=>Approval_admin_Show_Screen()));
                   },
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(205, 155, 65, 1.0)
+                      backgroundColor: Color.fromARGB(255,183,138,45),
                   ),
                   child: Text(
                     "SUBMIT",
                     style: TextStyle(
-                        color:Color.fromRGBO(244, 240, 220, 0.9254901960784314),
-                        fontSize: 23,
-                        fontWeight: FontWeight.w400 ),
+                        color:Color.fromARGB(255,254,249,245),
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal
+                    ),
                   ),
                 ),
               ),

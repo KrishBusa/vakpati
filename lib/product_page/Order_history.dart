@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:timelines/timelines.dart';
@@ -16,10 +15,10 @@ class _Order_History_pageState extends State<Order_History_page> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
-        title:  SizedBox(
-            height: 60,
-            width: 70,
-            child: Image.asset("assets/images/img.png")
+        title: SizedBox(
+          height: 50,
+          width: 90,
+          child: Image.asset("assets/images/Screenshot_2025-01-18_110524-removebg-preview.png",),
         ),
         actions: [
           Icon(Icons.search_rounded,size: 35,color: Colors.white,),

@@ -34,7 +34,7 @@ class _Approval_admin_Show_ScreenState extends State<Approval_admin_Show_Screen>
             ),
             SizedBox(height: 60,),
             Text("Awaited",style: TextStyle(fontSize: 36,color: Colors.deepOrange,fontWeight: FontWeight.w500),),
-            Text("for your approval by admin",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),)
+            Text("for your approval by admin",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500,color: Colors.black87),)
           ],
         ),
       ),

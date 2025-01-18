@@ -10,19 +10,18 @@ class Check_out_page extends StatefulWidget {
 }
 
 class _Check_out_pageState extends State<Check_out_page> {
-  int _selectedValue = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(234, 253, 252, 249),
+      backgroundColor: Color.fromARGB(250,238,235,232,),
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
         leading: Icon(Icons.menu,color: Colors.white,size: 30,),
-        title:  SizedBox(
-            height: 60,
-            width: 70,
-            child: Image.asset("assets/images/img.png")
+        title: SizedBox(
+          height: 50,
+          width: 90,
+          child: Image.asset("assets/images/Screenshot_2025-01-18_110524-removebg-preview.png",),
         ),
         actions: [
           Icon(Icons.search_rounded,size: 35,color: Colors.white,),
@@ -34,6 +33,7 @@ class _Check_out_pageState extends State<Check_out_page> {
           child: Column(
             children: [
               Container(
+                height: 60,
                 width: double.infinity,
                 color: Colors.white,
                 child: Row(
@@ -143,37 +143,37 @@ class _Check_out_pageState extends State<Check_out_page> {
                               children: [
                                 TextField(
                                   decoration: InputDecoration(
-                                    label: Text("Name",style: TextStyle(color: Colors.teal),)
+                                    label: Text("Name",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194)),)
                                   ),
                                 ),
                                 TextField(
                                   decoration: InputDecoration(
-                                      label: Text("Email Id",style: TextStyle(color: Colors.teal,),)
+                                      label: Text("Email Id",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194),),)
                                   ),
                                 ),
                                 TextField(
                                   decoration: InputDecoration(
-                                      label: Text("Contect No.",style: TextStyle(color: Colors.teal,),)
+                                      label: Text("Contect No.",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194),),)
                                   ),
                                 ),
                                 TextField(
                                   decoration: InputDecoration(
-                                      label: Text("Address",style: TextStyle(color: Colors.teal,),)
+                                      label: Text("Address",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194),),)
                                   ),
                                 ),
                                 TextField(
                                   decoration: InputDecoration(
-                                      label: Text("Pin code",style: TextStyle(color: Colors.teal,),)
+                                      label: Text("Pin code",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194),),)
                                   ),
                                 ),
                                 TextField(
                                   decoration: InputDecoration(
-                                      label: Text("City",style: TextStyle(color: Colors.teal,))
+                                      label: Text("City",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194),))
                                   ),
                                 ),
                                 TextField(
                                   decoration: InputDecoration(
-                                      label: Text("State",style: TextStyle(color: Colors.teal),)
+                                      label: Text("State",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194)),)
                                   ),
                                 ),
 
@@ -266,7 +266,7 @@ class _Check_out_pageState extends State<Check_out_page> {
                     Navigator.push(context, MaterialPageRoute(builder: (_)=>Order_History_1_page()));
                   },
                   style: OutlinedButton.styleFrom(
-                    backgroundColor: const Color.fromRGBO(205, 155, 65, 1.0),
+                    backgroundColor:  Color.fromARGB(255,183,138,45),
                   ),
                   child:  Text(
                     "PROCEED TO PAY",

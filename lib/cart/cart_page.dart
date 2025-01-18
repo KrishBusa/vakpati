@@ -13,13 +13,14 @@ class _Cart_screenState extends State<Cart_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(234, 253, 252, 249),
+      backgroundColor: Color.fromARGB(250,238,235,232,),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
-        title:  SizedBox(
-            height: 60,
-            child: Image.asset("assets/images/img.png")
+        title: SizedBox(
+          height: 50,
+          width: 90,
+          child: Image.asset("assets/images/Screenshot_2025-01-18_110524-removebg-preview.png",),
         ),
         leading: Icon(Icons.menu,color: Colors.white,size: 30,),
         actions: [
@@ -250,7 +251,7 @@ class _Cart_screenState extends State<Cart_screen> {
                 width: 120,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Color.fromRGBO(205, 155, 65, 1.0),
+                  color: Color.fromARGB(255,183,138,45),
                 ),
                   child: Center(child: Text("APPLAY",style: TextStyle(fontSize: 18,color: Colors.white),)),
 
@@ -271,7 +272,7 @@ class _Cart_screenState extends State<Cart_screen> {
                     width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Color.fromRGBO(205, 155, 65, 1.0),
+                      color: Color.fromARGB(255,183,138,45),
                     ),
                     child: Center(child: Text("CONTINUE SHOPPING",style: TextStyle(fontSize:15,color: Colors.white,fontWeight: FontWeight.w400),)),
 
@@ -287,7 +288,7 @@ class _Cart_screenState extends State<Cart_screen> {
                     width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Color.fromRGBO(205, 155, 65, 1.0),
+                      color:Color.fromARGB(255,183,138,45),
                     ),
                     child: Center(child: Text("PROCEED TO PAY",style: TextStyle(fontSize:15,color: Colors.white,fontWeight: FontWeight.w400),)),
 

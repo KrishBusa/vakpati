@@ -33,39 +33,39 @@ class _Sign_Up_screnState extends State<Sign_Up_scren> {
                   children: [
                     TextField(
                       decoration: InputDecoration(
-                          label: Text("Name",style: TextStyle(color: Colors.teal),)
+                          label: Text("Name",style: TextStyle(color:Color.fromARGB(255, 200, 194, 194)),)
                       ),
                     ),
                     SizedBox(height: 20,),
                     TextField(
                       decoration: InputDecoration(
-                          label: Text("Mobile No.",style: TextStyle(color: Colors.teal),)
+                          label: Text("Mobile No.",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194)),)
                       ),
                     ),
                     SizedBox(height: 20,),
                     TextField(
                       decoration: InputDecoration(
-                          label: Text("Email Id / Mobile No",style: TextStyle(color: Colors.teal),)
-                      ),
-                    ),
-                    SizedBox(height: 20,),
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          label: Text("Password",style: TextStyle(color: Colors.teal),)
+                          label: Text("Email Id / Mobile No",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194)),)
                       ),
                     ),
                     SizedBox(height: 20,),
                     TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                          label: Text("Conform password",style: TextStyle(color: Colors.teal),)
+                          label: Text("Password",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194)),)
+                      ),
+                    ),
+                    SizedBox(height: 20,),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          label: Text("Conform password",style: TextStyle(color: Colors.black26),)
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 30),
               SizedBox(
                 height: 60,
                 width: 216,
@@ -74,12 +74,12 @@ class _Sign_Up_screnState extends State<Sign_Up_scren> {
                     Navigator.push(context, MaterialPageRoute(builder: (_)=>OtpScreen()));
                   },
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(205, 155, 65, 1.0)
+                      backgroundColor:  Color.fromARGB(255,183,138,45),
                   ),
                   child: Text(
                     "Sign in",
                     style: TextStyle(
-                        color:Color.fromRGBO(244, 240, 220, 0.9254901960784314),
+                        color:Color.fromARGB(255,254,249,245),
                         fontSize: 23,
                         fontWeight: FontWeight.w400 ),
                   ),
@@ -88,10 +88,8 @@ class _Sign_Up_screnState extends State<Sign_Up_scren> {
               SizedBox(height: 10),
               Divider(),
               SizedBox(height: 10,),
-              Text("Are you running customer click here",style: TextStyle(color: Colors.teal),),
+              Text("Are you running customer click here",style: TextStyle(color: Colors.grey),),
               Spacer(),
-
-
             ],
           ),
         ),
