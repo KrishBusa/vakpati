@@ -49,15 +49,15 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
             ),
           ),
           Container(
-            margin:  EdgeInsets.all(10),
-            padding:  EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            height: 550,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            height: 520,
             width: 370,
             color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 Text(
+                Text(
                   "Order Summary",
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
@@ -65,74 +65,85 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                     color: Color.fromRGBO(205, 155, 65, 1.0),
                   ),
                 ),
-                 Divider(),
-                 SizedBox(height: 20),
+                Divider(),
+                SizedBox(height: 7),
+                Row(
+                  children: [
+                    SizedBox(width: 112,),
+                     Icon(
+                        Icons.keyboard_arrow_up_rounded,
+                        color: Colors.green,
+                        size: 40,
+                      ),
+
+                  ],
+                ),
                 Expanded(
                   child: Row(
                     children: [
-                      Spacer(),
                       SizedBox(
                         width: 100,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children:  [
-                            Text("25 May 2019",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("26 May 2019",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("27 May 2019",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("28 May 2019",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("28 May 2019",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
+                          children: [
+                            SizedBox(height: 27),
+                            Text("25 May 2019", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("26 May 2019", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("27 May 2019", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("28 May 2019", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("28 May 2019", style: TextStyle(fontSize: 16, color: Colors.teal)),
+
                           ],
                         ),
                       ),
-                      SizedBox(width: 20,),
+                      SizedBox(width: 20),
                       SizedBox(
                         width: 20,
                         child: Timeline.tileBuilder(
                           theme: TimelineThemeData(
-                            indicatorTheme:  IndicatorThemeData(
-                              size: 20,
+                            indicatorTheme: IndicatorThemeData(
+                              size: 12,
                               color: Colors.green,
                             ),
-                            connectorTheme:  ConnectorThemeData(
+                            connectorTheme: ConnectorThemeData(
                               thickness: 2,
                               color: Colors.green,
                             ),
                           ),
                           builder: TimelineTileBuilder.connected(
-                            itemExtent: 93,
-                            indicatorBuilder: (_, __) =>  DotIndicator(
+                            itemExtent: 76,
+                            indicatorBuilder: (_, index) => DotIndicator(
                               color: Colors.green,
                             ),
-                            connectorBuilder: (_, __, ___) =>
-                             SolidLineConnector(color: Colors.green),
-                            contentsBuilder: (_, __) =>  SizedBox.shrink(),
+                            connectorBuilder: (_, __, ___) => SolidLineConnector(color: Colors.green),
+                            contentsBuilder: (context, index) {
+                              return SizedBox.shrink();
+                            },
                             itemCount: 5,
                           ),
                         ),
                       ),
-                      SizedBox(width: 20,),
+                      SizedBox(width: 20),
                       SizedBox(
                         width: 150,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children:  [
-                            Text("Order Placed",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("Packed",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("Dispatched",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("Out for Delivery",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
-                            Text("Delivered",
-                                style: TextStyle(fontSize: 16, color: Colors.teal)),
+                          children: [
+                            SizedBox(height: 27),
+                            Text("Order Placed", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("Packed", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("Dispatched", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("Out for Delivery", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 53),
+                            Text("Delivered", style: TextStyle(fontSize: 16, color: Colors.teal)),
+                            SizedBox(height: 10),
                           ],
                         ),
                       ),
@@ -143,6 +154,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
               ],
             ),
           ),
+
           SizedBox(height: 20),
           SizedBox(
             height: 50,
