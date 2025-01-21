@@ -1,5 +1,9 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:vakpati/Otp_scrren.dart';
 import 'package:vakpati/sign%20up.dart';
+import 'authservices/auth_service.dart';
+
 
 class Sign_in_screen extends StatefulWidget {
   const Sign_in_screen({super.key});
@@ -9,6 +13,17 @@ class Sign_in_screen extends StatefulWidget {
 }
 
 class _Sign_in_screenState extends State<Sign_in_screen> {
+  final _auth = AuthService();
+  final _email = TextEditingController();
+  final _password = TextEditingController();
+
+  @override
+  void dispose(){
+    super.dispose();
+    _email.dispose();
+    _password.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,15 +46,19 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                 child: Column(
                   children: [
                     TextField(
+                      controller: _email,
                       decoration: InputDecoration(
-                        label: Text("Email Id / Mobile No",style: TextStyle(
-                            color: Color.fromARGB(255, 200, 194, 194)
+                        label: Text("Email Id / Mobile No",
+
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 200, 194, 194),
                         ),
                         )
                       ),
                     ),
                     SizedBox(height: 20,),
                     TextField(
+                      controller: _password,
                       obscureText: true,
                       decoration: InputDecoration(
                           label: Text("Password",style: TextStyle(color: Color.fromARGB(255, 200, 194, 194)),)
@@ -53,9 +72,7 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
                 height: 60,
                 width: 216,
                 child: OutlinedButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (_)=>Sign_Up_scren()));
-                  },
+                  onPressed: _signin,
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255,183,138,45),
                   ),
@@ -99,5 +116,35 @@ class _Sign_in_screenState extends State<Sign_in_screen> {
       ),
 
     );
+  }
+  _signin() async {
+    try {
+      final user = await _auth..LoginUserWithEmailAndPassword(
+        _email.text,
+        _password.text,
+      );
+      if (user != null) {
+        log("Login successful");
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => OtpScreen()),
+        );
+      }
+    } catch (e) {
+      log("Login failed: \$e");
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text("Error"),
+          content: Text("Failed to log in: \$e"),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text("OK"),
+            ),
+          ],
+        ),
+      );
+    }
   }
 }

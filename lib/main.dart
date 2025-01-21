@@ -1,20 +1,27 @@
+import 'dart:io';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:vakpati/Otp_scrren.dart';
 import 'package:vakpati/Splach_screen.dart';
-import 'package:vakpati/approvel_admin_show_scrren.dart';
-import 'package:vakpati/cart/cart_page.dart';
-import 'package:vakpati/cart/checkout_page.dart';
-import 'package:vakpati/product_page/Order_history_2.dart';
-import 'package:vakpati/product_page/categaris_images_screen.dart';
-import 'package:vakpati/home_screen.dart';
-import 'package:vakpati/product_page/my_invoice.dart';
-import 'package:vakpati/product_page/product_Page.dart';
-import 'package:vakpati/sign%20in.dart';
-import 'package:vakpati/sign%20up.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  if(Platform.isAndroid){
+    await Firebase.initializeApp(
+        options: const FirebaseOptions(
+            apiKey: "AIzaSyB-uk3MDT2Q8LA_WdyDjG377B7uE98fxws",
+            appId: "com.example.vakpati",
+            messagingSenderId: "589955078421",
+            projectId: "vakpati-9a580"
+        )
+    );
+  }
+  else{
+    await Firebase.initializeApp();
+
+  }
+  runApp( MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OrderHistoryPage()
+      home: Splach_Screen()
     );
   }
 }
