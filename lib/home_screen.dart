@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vakpati/product_page/categaris_images_screen.dart';
+import 'package:vakpati/sign%20in.dart';
+
+import 'authservices/auth_service.dart';
 
 class Home_scren extends StatefulWidget {
   const Home_scren({super.key});
@@ -9,19 +12,32 @@ class Home_scren extends StatefulWidget {
 }
 
 class _Home_screnState extends State<Home_scren> {
+  final _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color.fromARGB(250,238,235,232,),
         appBar: AppBar(
-          automaticallyImplyLeading: false,
+
           backgroundColor: Color.fromRGBO(205, 155, 65, 1.0),
           title: SizedBox(
             height: 50,
             width: 90,
             child: Image.asset("assets/images/Screenshot_2025-01-18_110524-removebg-preview.png",),
           ),
-          leading: Icon(Icons.menu,color: Colors.white,size: 30,),
+          leading: IconButton(
+              onPressed: () async {
+                await _auth.signout();
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => Sign_in_screen()),
+                );
+              },
+              icon: Icon(
+                Icons.menu,color: Colors.white,
+                size: 30,
+              )
+          ),
           actions: [
             Icon(Icons.search_rounded,size: 35,color: Colors.white,),
             SizedBox(width: 16),
@@ -149,7 +165,7 @@ class _Home_screnState extends State<Home_scren> {
               ),
             ),
 
-            // Additional Banner
+
             Container(
               margin: EdgeInsets.all(8.0),
               decoration: BoxDecoration(
@@ -177,6 +193,26 @@ class _Home_screnState extends State<Home_scren> {
           ],
         ),
       )
+    );
+  }
+  _drawer(){
+    Drawer(
+        backgroundColor: Color.fromARGB(250,238,235,232,),
+        child: ListView(
+          children: [
+            DrawerHeader(child: Text("")),
+            ListTile(
+              title: Text("Log Out"),
+              onTap: () async {
+                await _auth.signout();
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => Sign_in_screen()),
+                );
+              },
+            ),
+          ],
+        )
     );
   }
 }

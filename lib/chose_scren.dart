@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:vakpati/Otp_scrren.dart';
+import 'package:vakpati/home_screen.dart';
 import 'package:vakpati/sign%20in.dart';
 import 'package:vakpati/authservices/auth_service.dart';
 
@@ -26,7 +27,7 @@ class _Choose_screenState extends State<Choose_screen> {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => OtpScreen()),
+          MaterialPageRoute(builder: (_) => Home_scren()),
         );
       });
     }
